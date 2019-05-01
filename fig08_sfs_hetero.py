@@ -23,7 +23,7 @@ rc('text', usetex=True)
 #(0) Simulate heterogeneous 1D data:
 J,Q    = 12, 101
 w0,w1  = 2, 25
-nIter  = 50    #change this to 10000 to replicate the results from the paper
+nIter  = 500    #change this to 10000 to replicate the results from the paper
 sqrtN  = J**0.5
 amps   = [0.1, 0.5, 2.0]
 T,W    = [],[]
@@ -98,7 +98,7 @@ for ax,sf,sfe,fpr in zip(AX,SF,SFE,FPR):
 	ax.set_ylim(0, 0.6)
 
 pyplot.setp(AX, xticks=[2,3,4,5])
-leg = ax0.legend(loc='lower left', bbox_to_anchor=(0.2,0.20))
+leg = ax0.legend(loc='lower left', bbox_to_anchor=(0.2,0.20), frameon=False)
 pyplot.setp(leg.get_texts(), size=8)
 
 [ax.text(0.5, -0.24, r'$u$', size=12, transform=ax.transAxes)  for ax in AX]

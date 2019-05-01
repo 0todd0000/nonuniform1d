@@ -50,6 +50,7 @@ w            = nonuniform1d.generate_fwhm_continuum('step', Q, w0, w1)
 df           = J-1
 sqrtN        = np.sqrt(J)
 ### random number generators:
+np.random.seed(1)
 randf0       = lambda : rft1d.randn1d(J, Q, wmean)
 randf1       = lambda : nonuniform1d.randn1dnu(J, w)
 
@@ -57,7 +58,7 @@ randf1       = lambda : nonuniform1d.randn1dnu(J, w)
 
 
 #(1) Simulate, save t continua:
-nIter        = 500
+nIter        = 500    #change this to 10000 to replicate the results from the paper
 T,W          = [],[]
 for randf in [randf0,randf1]:
 	t,we     = [],[]
@@ -125,7 +126,7 @@ for ax,p,psim in zip([ax0,ax1], [P0,P1],[Psim0,Psim1]):
 	# ax.set_xlabel(r'$k$', size=11)
 	ax.set_xlabel('Cluster extent (\%)', size=11)
 	if ax==ax0:
-		ax.legend(['Simulated', 'Theoretical'], fontsize=8)
+		ax.legend(['Simulated', 'Theoretical'], fontsize=8, frameon=False)
 		ax.set_ylabel('Probability', size=11)
 
 
@@ -159,8 +160,6 @@ for i,ax in enumerate(AX.flatten()):
 
 
 pyplot.show()
-
-
 
 
 

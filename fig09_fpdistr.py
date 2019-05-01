@@ -142,10 +142,9 @@ for ax,counts in zip([ax6,ax7], [counts0, counts1]):
 
 
 ### legends:
-for ax in AX[:2,0]:
-	leg = ax.legend(loc='lower left', bbox_to_anchor=(0.03,-0.01))
-	# leg = ax.legend(loc='lower right', bbox_to_anchor=(0.99,-0.01))
-	pyplot.setp(leg.get_texts(), size=8)
+ax = AX[0,0]
+leg = ax.legend(loc='lower left', bbox_to_anchor=(0.03,-0.01), frameon=False)
+pyplot.setp(leg.get_texts(), size=8)
 
 ### x axis labels:
 [ax.set_xlabel(r'Time (\%)', size=12)  for ax in AX[-1]]
@@ -170,9 +169,6 @@ for ax,label in zip([ax5,ax7],labels):
 
 
 pyplot.show()
-
-
-
 
 
 

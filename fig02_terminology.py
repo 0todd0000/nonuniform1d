@@ -44,7 +44,7 @@ ax0,ax1,ax2,ax3 = AX
 ### plot:
 h0 = ax0.plot(y0.T, lw=0.5, color=lcolor)[0]
 h1 = ax0.plot(y0.mean(axis=0), 'k', lw=3)[0]
-ax0.legend([h0,h1], ['Single observations', 'Sample mean'], prop=dict(family=fontname, size=10), loc='lower center')
+ax0.legend([h0,h1], ['Single observations', 'Sample mean'], prop=dict(family=fontname, size=10), loc='lower center', frameon=False)
 
 ax1.plot(y1.T, lw=0.5, color=lcolor)
 ax1.plot(y1.mean(axis=0), 'k', lw=3)

@@ -49,13 +49,12 @@ pyplot.setp(ax1.get_yticklabels(), visible=True)
 pyplot.setp(AX, xlim=(0,100))
 pyplot.setp([ax2,ax3], ylim=(-5,90))
 ax1.set_ylim(-100, 3400)
-labels = '(a) Simulated', '(c) Neptune et al. (1999)', '(b) True smoothness', '(d) Estimated smoothness'
+labels = '(a) Simulated', '(b) Neptune et al. (1999)', '(c) True smoothness', '(d) Estimated smoothness'
 [ax.text(0.03, 0.9, label, name=fontname, transform=ax.transAxes)   for i,(ax,label) in enumerate(zip(AX,labels))]
 labels = 'Continuum position  (%)', 'Time  (%)'
 [ax.set_xlabel(label, name=fontname, size=12)  for ax,label in zip([ax2,ax3],labels)]
 labels = 'Gaussian noise value', 'Ground reaction force  (N)', 'FWHM', 'FWHM'
 [ax.set_ylabel(label, name=fontname, size=12)  for ax,label in zip(AX,labels)]
 pyplot.show()
-
 
 

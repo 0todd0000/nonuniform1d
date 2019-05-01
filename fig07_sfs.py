@@ -85,7 +85,7 @@ for ax,sf,sfe,fpr in zip(AX,SF,SFE,FPR):
 	ax.text(3.1, 0.15,r'FPR$_\textrm{sim}$ = %.3f' %fpr, size=9)
 
 pyplot.setp(AX, xticks=[2,3,4,5])
-leg      = ax0.legend()
+leg      = ax0.legend(frameon=False)
 pyplot.setp(leg.get_texts(), size=8)
 
 [ax.text(0.5, -0.24, r'$u$', size=12, transform=ax.transAxes)  for ax in AX]
@@ -99,7 +99,6 @@ for ax in AX:
 	ax.text(2.0, 0.01, r'$p<0.05$', size=8, color='0.7')
 
 pyplot.show()
-
 
 
 
