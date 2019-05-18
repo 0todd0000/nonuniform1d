@@ -6,7 +6,7 @@ The scripts "fig*.py" reproduce all figures from the paper below, and all figure
 
 * Please consider citing:
 
-Pataky TC, Vanrenterghem J, Robinson MA, Liebl D (in preparation). On the validity of statistical parametric mapping for nonuniformly and heterogeneously smooth one-dimensional biomechanical data. *Journal of Biomechanics*.
+Pataky TC, Vanrenterghem J, Robinson MA, Liebl D (2019). On the validity of statistical parametric mapping for nonuniformly and heterogeneously smooth one-dimensional biomechanical data. *Journal of Biomechanics*, in press (as of 2019-05-18).
 
 
 * If you use the dataset "Neptune2009means.h5" please cite:
